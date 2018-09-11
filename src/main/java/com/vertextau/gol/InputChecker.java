@@ -14,7 +14,7 @@ public class InputChecker {
         try {
             value = Integer.parseInt(element.getText());
         } catch (NumberFormatException e) {
-            element.setText("Error. Please enter a integer");
+            element.setText("Error. Please enter an integer");
             return false;
         }
 
