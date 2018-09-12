@@ -1,3 +1,4 @@
+# IntelliJ IDEA
 /.idea/
 
 /target/
@@ -6,3 +7,8 @@
 
 /.project
 /.classpath
+
+# Emacs
+*~
+\#*#
+.#*
