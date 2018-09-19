@@ -87,6 +87,8 @@ public final class UI {
 
         JButton clearButton = new JButton("Clear");
 
+        JButton randomButton = new JButton("Random");
+
         /*
         Input fields
          */
@@ -108,6 +110,7 @@ public final class UI {
         toolBar.add(coordinates);
         toolBar.add(playButton);
         toolBar.add(clearButton);
+        toolBar.add(randomButton);
 
 
         // WIP
@@ -240,6 +243,11 @@ public final class UI {
             drawWorld();
 
             canvas.repaint();
+        });
+
+        // WIP
+        randomButton.addActionListener((ae) -> {
+
         });
     }
 
