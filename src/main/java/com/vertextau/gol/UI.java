@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
@@ -247,7 +248,18 @@ public final class UI {
 
         // WIP
         randomButton.addActionListener((ae) -> {
+            if (!playState) {
+                Random random = new Random();
 
+                int i = 2 * (worldRows + worldColumns);
+
+                for (; i > 0; --i) {
+                    world.getCell(random.nextInt(worldRows), random.nextInt(worldColumns)).setNewState(true);
+                }
+
+                drawWorld();
+                canvas.repaint();
+            }
         });
     }
 
