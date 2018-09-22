@@ -160,15 +160,18 @@ public final class UI {
             if (!playState) {
                 for (int r = 0; r < this.worldRows; ++r) {
                     for (int c = 0; c < this.worldColumns; ++c) {
+
                         Cell cell = world.getCell(r, c);
-                        if (cell.getOldState()) {
+
+                        if (cell.getNewState()) {
                             cell.setOldState(false);
+
                             fillCell(Cell.deadCellColor, r, c);
-                            drawWorld();
-                            canvas.repaint();
                         }
                     }
                 }
+
+                canvas.repaint();
             }
         });
 
