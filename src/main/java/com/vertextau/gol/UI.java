@@ -246,18 +246,25 @@ public final class UI {
             canvas.repaint();
         });
 
-        // WIP
         randomButton.addActionListener((ae) -> {
             if (!playState) {
                 Random random = new Random();
+                int randomRow, randomColumn;
 
                 int i = 2 * (worldRows + worldColumns);
 
                 for (; i > 0; --i) {
-                    world.getCell(random.nextInt(worldRows), random.nextInt(worldColumns)).setNewState(true);
+                    randomRow = random.nextInt(worldRows);
+                    randomColumn = random.nextInt(worldColumns);
+
+                    Cell currentCell = world.getCell(randomRow, randomColumn);
+
+                    if (!currentCell.getNewState()) {
+                        currentCell.setOldState(true);
+                        fillCell(Cell.liveCellColor, randomRow, randomColumn);
+                    }
                 }
 
-                drawWorld();
                 canvas.repaint();
             }
         });
