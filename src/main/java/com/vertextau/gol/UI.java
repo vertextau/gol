@@ -291,9 +291,7 @@ public final class UI {
             @Override
             public void run() {
                 if (playState) {
-                    world.changeState();
-                    drawWorld();
-                    canvas.repaint();
+                    step();
                     try {
                         TimeUnit.SECONDS.sleep(discreteStep);
                     } catch (InterruptedException e) {
@@ -303,6 +301,15 @@ public final class UI {
             }
         };
         timer.scheduleAtFixedRate(task, 0, 100);
+    }
+
+    /*
+    Grouping together methods which run the world.
+     */
+    private void step() {
+        world.changeState();
+        drawWorld();
+        canvas.repaint();
     }
 
     /*
