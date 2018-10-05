@@ -90,6 +90,8 @@ public final class UI {
 
         JButton randomButton = new JButton("Random");
 
+        JButton nextStep = new JButton("Next Step");
+
         /*
         Input fields
          */
@@ -112,6 +114,7 @@ public final class UI {
         toolBar.add(playButton);
         toolBar.add(clearButton);
         toolBar.add(randomButton);
+        toolBar.add(nextStep);
 
 
         // WIP
@@ -269,6 +272,12 @@ public final class UI {
                 }
 
                 canvas.repaint();
+            }
+        });
+
+        nextStep.addActionListener((ae) -> {
+            if (!playState) {
+                step();
             }
         });
     }
