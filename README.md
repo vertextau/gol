@@ -1,4 +1,4 @@
-# Conway's Game of Life
-###### Simple Game of Life using Java and Swing
+# Game of Life
+###### Conway's Game of Life written in Java
 
 ![](example.gif)
