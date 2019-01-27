@@ -1,8 +1,9 @@
 package com.vertextau.gol;
 
+import javax.swing.SwingUtilities;
+
 public class Main {
     public static void main(String[] args) {
-        UI ui = new UI();
-        ui.initWorld();
+        SwingUtilities.invokeLater(EntryWindow::new);
     }
 }

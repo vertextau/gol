@@ -55,11 +55,6 @@ public final class UI {
     private Image imageWorld;
     private Graphics graphics;
 
-
-    public UI() {
-        this(1, 50, 50);
-    }
-
     public UI(int discreteStep, int worldRows, int worldColumns) {
 
         this.worldRows = worldRows;
