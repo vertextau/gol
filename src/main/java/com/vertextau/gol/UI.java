@@ -68,6 +68,7 @@ public final class UI {
         frame.setResizable(false);
         frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
 
         canvas = new JPanel() {
             @Override
